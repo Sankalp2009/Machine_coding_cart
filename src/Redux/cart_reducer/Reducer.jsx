@@ -3,11 +3,13 @@ const InitialState = {
 }
 
 const reducer = (currentState = InitialState, action) => {
-  const {type} = action;
+  const {type, payload} = action;
+
   switch (type) {
     case "Add_cart":
       return{
-        
+        ...currentState,
+        cart_data: [...currentState.cart_data, payload]
       }
   
     default:
