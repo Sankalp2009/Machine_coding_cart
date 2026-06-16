@@ -1,8 +1,11 @@
-import React from 'react'
-
+import { ShoppingCart } from 'lucide-react';
 function Header() {
   return (
-    <div>Header</div>
+    <div className='Header'>
+    <h3>Home</h3>
+    <h3>About</h3>
+    <ShoppingCart />
+    </div>
   )
 }
 
