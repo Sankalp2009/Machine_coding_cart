@@ -14,7 +14,6 @@ function Dashboard() {
         setIsLoading(true)
         let res = await getApi('https://fakestoreapi.com/products')
         let data = await res
-        console.log(data)
         setProduct(data)
       } catch (error) {
         console.log(error)
