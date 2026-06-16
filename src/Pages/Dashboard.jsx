@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { getApi } from '../utils/Api'
 import Product from '../Components/Product'
 function Dashboard() {
