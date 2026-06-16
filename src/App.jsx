@@ -1,10 +1,13 @@
 import './App.css'
+import AllRoutes from './Routes/AllRoutes'
+import Header from './Components/Header'
 
 function App() {
 
   return (
     <>
-    <h1>Machine Coding shopping cart</h1>
+    <Header /> 
+    <AllRoutes />
     </>
   )
 }

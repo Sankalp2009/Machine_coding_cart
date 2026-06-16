@@ -1,9 +1,19 @@
-import React from 'react'
+import ProductCard from './ProductCard'
 
-function Product() {
+function Product({ data }) {
+  
   return (
-    <div>Product</div>
+    <div>
+      {
+        data && data?.map(el => {
+          <div key={el.id}>
+           <ProductCard product={el} />
+          </div>
+        })
+      }
+    </div>
   )
+
 }
 
 export default Product
