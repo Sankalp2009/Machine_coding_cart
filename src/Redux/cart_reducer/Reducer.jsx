@@ -15,4 +15,4 @@ const reducer = (currentState = InitialState, action) => {
   }
 }
 
-export default reducer;
+export { reducer };
