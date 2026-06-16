@@ -11,7 +11,10 @@ const reducer = (currentState = InitialState, action) => {
         ...currentState,
         cart_data: [...currentState.cart_data, payload]
       }
-  
+    case "Remove_cart":
+      return {
+        cart_data: currentState.cart_data.filter(item => item.id !== payload)
+      }
     default:
       return currentState;
   }
