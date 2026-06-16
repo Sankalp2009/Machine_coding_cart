@@ -3,14 +3,12 @@ import ProductCard from './ProductCard'
 function Product({ data }) {
   
   return (
-    <div>
-      {
-        data && data?.map(el => {
-          <div key={el.id}>
-           <ProductCard product={el} />
-          </div>
-        })
-      }
+    <div className="products-wrapper">
+      <div className="products-grid">
+        {data?.map((el) => (
+          <ProductCard key={el.id} product={el} />
+        ))}
+      </div>
     </div>
   )
 
