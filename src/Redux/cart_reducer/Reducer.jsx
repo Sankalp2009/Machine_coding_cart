@@ -14,7 +14,8 @@ const reducer = (currentState = InitialState, action) => {
         (item) => item.id === product.id
       )
       if (duplicates) return currentState
-
+      
+      // Immutable state update pattern
       return {
         ...currentState,
         cart_data: [...currentState.cart_data, payload],

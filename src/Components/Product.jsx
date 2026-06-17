@@ -1,7 +1,6 @@
 import ProductCard from './ProductCard'
 
 function Product({ data }) {
-  
   return (
     <div className="products-wrapper">
       <div className="products-grid">

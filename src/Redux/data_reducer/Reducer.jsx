@@ -7,7 +7,6 @@ const initialState = {
 
 const reducer = (currentState = initialState, action) => {
   const { type, payload } = action
-
   switch (type) {
     case 'Get_Request':
       return {
