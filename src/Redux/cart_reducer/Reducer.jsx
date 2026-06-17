@@ -1,23 +1,33 @@
 const InitialState = {
-  cart_data:[]
+  cart_data: [],
 }
 
 const reducer = (currentState = InitialState, action) => {
-  const {type, payload} = action;
+  const { type, payload } = action
 
   switch (type) {
-    case "Add_cart":
-      return{
-        ...currentState,
-        cart_data: [...currentState.cart_data, payload]
-      }
-    case "Remove_cart":
+    case 'Add_cart': {
+      
+      // check for duplicates 
+      const product = payload
+      const duplicates = currentState.cart_data.some(
+        (item) => item.id === product.id
+      )
+      if (duplicates) return currentState
+
       return {
-        cart_data: currentState.cart_data.filter(item => item.id !== payload)
+        ...currentState,
+        cart_data: [...currentState.cart_data, payload],
+      }
+    }
+    case 'Remove_cart':
+      return {
+        ...currentState,
+        cart_data: currentState.cart_data.filter((item) => item.id !== payload),
       }
     default:
-      return currentState;
+      return currentState
   }
 }
 
-export { reducer };
+export { reducer }
