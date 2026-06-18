@@ -1,4 +1,8 @@
-function Search({ query, setQuery }) {
+import { useContext } from 'react'
+import { GlobalSearch } from '../Context/SearchContext'
+function Search() {
+  const { query, setQuery } = useContext(GlobalSearch)
+
   return (
     <div>
       <input
