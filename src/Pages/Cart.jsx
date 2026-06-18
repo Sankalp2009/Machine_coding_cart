@@ -1,10 +1,9 @@
 import { useSelector } from 'react-redux'
 import CartCard from '../Components/CartCard'
-CartCard
 function Cart() {
-  const cart = useSelector((state) => state.cart_data) || [];
+  const cart = useSelector((state) => state?.Cart?.cart_data) || []
 
-  const TotalPrice = cart.reduce((acc, {price})=>{
+  const TotalPrice = cart.reduce((acc, { price }) => {
     return acc + Math.floor(price)
   }, 0)
 

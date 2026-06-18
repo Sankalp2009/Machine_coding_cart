@@ -1,16 +1,18 @@
+import { useContext } from 'react'
+import { GlobalSearch } from '../Context/SearchContext'
+function Search() {
+  const { query, setQuery } = useContext(GlobalSearch)
 
-
-function Search({query, setQuery}) {
   return (
     <div>
-      <input 
-      type="text" 
-      name="search"
-      value={query}
-      onChange={(e)=>{
-        setQuery(e.target.value)
-      }}
-      placeholder='Enter Search...'
+      <input
+        type="text"
+        name="search"
+        value={query}
+        onChange={(e) => {
+          setQuery(e.target.value)
+        }}
+        placeholder="Enter Search..."
       />
     </div>
   )
